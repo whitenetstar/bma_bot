@@ -3,7 +3,7 @@
 require "vendor/autoload.php";
 require_once 'vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php';
 
-$access_token = 'trDx2gTUsd/6C6EgXFRz2Cv7teEgdwxvmBaRH+YTUAfvMUJOw0npGoKhGAorYttBSIHHBnq2g1xORJVW93vJqLyebuuwyLQ3Wo5zAT7kjEdt+1GN5Rk2JwcxXE2f3IwVNNtsEVUYwe6Be21KZhPoVgdB04t89/1O/w1cDnyilFU=';
+$access_token = 'hX6mh6ovxUb10Eu7saDu3tsscGXPMdsojC1H4bp+JdvrQvYoxECZcz1b6gBbdMtqSIHHBnq2g1xORJVW93vJqLyebuuwyLQ3Wo5zAT7kjEcj6LQUFNQ4KxvveU4UV43ZNSYNq7H3CypiUbpNZNDIlAdB04t89/1O/w1cDnyilFU=';
 
 // Get POST body content
 $content = file_get_contents('php://input');
@@ -14,7 +14,7 @@ if (!is_null($events['events'])) {
     // Loop through each event
     foreach ($events['events'] as $event) {
         // Reply only when message sent is in 'text' format
-        if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+        if ($event['type'] == 'follow') {
             // Get text sent
             $text = $event['source']['userId'];
             // Get replyToken
