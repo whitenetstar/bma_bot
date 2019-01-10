@@ -9,7 +9,7 @@ $bot = new \LINE\LINEBot(new CurlHTTPClient($access_token), [
     'channelSecret' => $channelSecret
 ]);
 //$request_body = file_get_contents("php://input");
-$signature = new \LINE\LINEBot\Constant\HTTPHeader::LINE_SIGNATURE;
+//$signature = new \LINE\LINEBot\Constant\HTTPHeader::LINE_SIGNATURE;
 $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('ทดสอบนะค่ะ');
 $response = $bot->pushMessage($uid, $textMessageBuilder);
 
