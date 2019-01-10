@@ -8,7 +8,7 @@ $uid = 'Ub7e92a80ec459cbb30ee1cb5fde78900';
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hello world');
-$response = $bot->pushMessage($idPush, $textMessageBuilder);
+$response = $bot->pushMessage($uid, $textMessageBuilder);
 
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
 ?>
