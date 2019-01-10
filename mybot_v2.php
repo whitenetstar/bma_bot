@@ -7,8 +7,8 @@ $channelSecret = '695209a4c6640b2d57bbc437b15bdda8';
 $uid = 'Ub7e92a80ec459cbb30ee1cb5fde78900';
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
-//$signature = new \LINE\LINEBot\Constant\HTTPHeader::LINE_SIGNATURE;
-$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder($signature);
+$signature = new \LINE\LINEBot\Constant\HTTPHeader::LINE_SIGNATURE;
+$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('สวัสดีนะจ๊ะหนู');
 $response = $bot->pushMessage($uid, $textMessageBuilder);
 
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
